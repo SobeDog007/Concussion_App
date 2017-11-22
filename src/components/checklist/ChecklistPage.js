@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import questions from './testQuestions';
 
+const ulStyle = {
+  listStyleType: 'none',
+  fontSize: '20px'
+};
+
 export default class ChecklistPage extends React.Component {
   constructor() {
     super()
@@ -30,7 +35,7 @@ export default class ChecklistPage extends React.Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul style={ulStyle} >
           {this.state.questions.signs.map((question, index) => {
 
             return (
@@ -54,17 +59,3 @@ export default class ChecklistPage extends React.Component {
     );
   }
 }
-
-  /*
-export default class ChecklistPage extends Component{
-  render(){
-    return (
-    <div className="container">
-      <h1>Checklist</h1>
-      <p>
-        This is the page that shows a checklist of signs, symptoms and do NOT miss symptoms.
-      </p>
-    </div>
-    )
-  }
-} */
