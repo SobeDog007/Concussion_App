@@ -6,8 +6,8 @@ import LoginPage from './components/auth/LoginPage';
 import Layout from './components/common/Layout';
 import HomePage from './components/home/HomePage';
 import ChecklistPage from './components/checklist/ChecklistPage';
-import ResultsU from './components/results/ResultsU';
-import ResultsNU from './components/results/ResultsNU';
+import ResultsU from './components/resultsU/ResultsU';
+import ResultsNU from './components/resultsNU/ResultsNU';
 import AdditionalPage from './components/additional/AdditionalPage';
 import '../scss/site.scss';
 
