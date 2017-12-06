@@ -1,10 +1,11 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import './AdditionalPage.css';
 
 export default class AdditionalPage extends Component{
   render(){
     return (
-    <div className="container">
-      <h1>Additional Resources</h1>
+    <div className="container test">
+      <h1 className="center">Additional Resources</h1>
       <h3>
       All information provided by this application respectfully sourced from Heads Up CDC program. 
       Additional information, resources, materials, and training can be found at their website.</h3>

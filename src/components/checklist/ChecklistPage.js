@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import questions from './testQuestions';
+import './ChecklistPage.css';
 
 const ulStyle = {
   listStyleType: 'none',
@@ -40,10 +41,39 @@ export default class ChecklistPage extends React.Component {
 
             return (
               <li key={index}>
-                <label htmlFor="checkBox1">{question}</label>
+               
                 <input
                   onChange={this.changeInput}
                   name={`signs-${index}`} type="checkbox" />
+                  <label htmlFor="checkBox1">{question}</label>
+              </li>
+
+            )
+          })}
+
+          {this.state.questions.symptoms.map((question, index) => {
+
+            return (
+              <li key={index}>
+               
+                <input
+                  onChange={this.changeInput}
+                  name={`symptoms-${index}`} type="checkbox" />
+                   <label htmlFor="checkBox1">{question}</label>
+              </li>
+
+            )
+          })}
+
+          {this.state.questions.doNotMiss.map((question, index) => {
+
+            return (
+              <li key={index}>
+                
+                <input
+                  onChange={this.changeInput}
+                  name={`doNotMiss-${index}`} type="checkbox" />
+                  <label htmlFor="checkBox1">{question}</label>
               </li>
 
             )
