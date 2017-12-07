@@ -36,87 +36,83 @@ export default class ChecklistPage extends React.Component {
   	render() {
     	return (
 
-    	<div className="parentDiv">
+    		<div className="parentDiv">
 
-    		<div class="row">
+	    		<div className="row">
 
-    			<div class="col-md-5">
+	    			<div className="col-lg-6">
 
-      			<div className="checklistmain">
+	      			<div className="checklistmain1">
 
-      		<h2><b>Signs & Symptoms</b></h2>
-      		
-        		<ul style={ulStyle} >
+			      		<h2>Signs & Symptoms</h2>
+			      		
+			        		<ul style={ulStyle} >
 
-          		{this.state.questions.signs.map((question, index) => {
+			          		{this.state.questions.signs.map((question, index) => {
 
-	            	return (
-	              		<li key={index}>
-	               
-		               	<input
-		                  	onChange={this.changeInput}
-		                  	name={`signs-${index}`} type="checkbox" />
-		                  <label htmlFor="checkBox1">{question}</label>
-		              	</li>
-	            	)
-          		})}
+				            	return (
+				              		<li key={index}>
+				               
+					               	<input
+					                  	onChange={this.changeInput}
+					                  	name={`signs-${index}`} type="checkbox" />
+					                  <label htmlFor="checkBox1">{question}</label>
+					              	</li>
+				            	)
+			          		})}
 
-          		{this.state.questions.symptoms.map((question, index) => {
+			          		{this.state.questions.symptoms.map((question, index) => {
 
-		            return (
-		              	<li key={index}>
-		               
-		               	<input
-		                  	onChange={this.changeInput}
-		                  	name={`symptoms-${index}`} type="checkbox" />
-		                   <label htmlFor="checkBox1">{question}</label>
-		              	</li>
-		            )
-		         })}
+					            return (
+					              	<li key={index}>
+					               
+					               	<input
+					                  	onChange={this.changeInput}
+					                  	name={`symptoms-${index}`} type="checkbox" />
+					                   <label htmlFor="checkBox1">{question}</label>
+					              	</li>
+					            )
+					         })}
 
-		      </ul>
+					      </ul>
 
+			      	</div>
+			      </div>
 
-		      	</div>
+			      <div className="col-lg-6">
 
-		      </div>
+			      	<div className="checklistmain2">
 
-		      <div class="col-md-5">
+			      		<h2>Do Not Miss Signs</h2>
 
-		      	<div className="checklistmain">
+					      <ul style={ulStyle} >
 
+				          	{this.state.questions.doNotMiss.map((question, index) => {
 
-      		<h2><b>Do Not Miss Signs</b></h2>
+				            	return (
+				              		<li key={index}>
+				                
+				                		<input
+				                  		onChange={this.changeInput}
+				                  		name={`doNotMiss-${index}`} type="checkbox" />
+				                  	<label htmlFor="checkBox1">{question}</label>
+				              		</li>
+			            		)
+			          		})}
 
-		      <ul style={ulStyle} >
+			        		</ul>
 
-	          	{this.state.questions.doNotMiss.map((question, index) => {
+	        			</div>
+	        		</div>
+	        	</div>
 
-	            	return (
-	              		<li key={index}>
-	                
-	                		<input
-	                  		onChange={this.changeInput}
-	                  		name={`doNotMiss-${index}`} type="checkbox" />
-	                  	<label htmlFor="checkBox1">{question}</label>
-	              		</li>
-            		)
-          		})}
+	        	<div className="row">
 
-        		</ul>
+	        		<input className="submit" type="submit" value="Calculate Results"
+	          		onClick={() => this.submitData()}
+	        		/>
 
-        			</div>
-        		</div>
-
-        	</div>
-
-        	<div class="row">
-
-        		<input className="submit" type="submit" value="Calculate"
-          		onClick={() => this.submitData()}
-        		/>
-
-      	</div>
+	      	</div>
       	</div>
     	);
   	}

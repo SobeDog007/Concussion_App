@@ -1,12 +1,14 @@
-.test {
+.mainbox2 {
 	font-family: "Arial", sans-serif;
 	border: 1px solid black;
 	background-color: #f3e986; /* light yellow */
-	position: center;			
+	/*position: center;	*/		
 }
 
-.center  {
+.heading  {
 	font-family: "Arial", sans-serif;
    text-align: center;
    border: 1px solid black;
+   padding-top:    10px;
+   padding-bottom: 10px;
 }

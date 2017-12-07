@@ -6,9 +6,9 @@ export default class AdditionalPage extends Component{
   	render(){
 
     	return (
-    		<div className="container test">
+    		<div className="container mainbox2">
 
-      		<h1 className="center">Additional Resources</h1>
+      		<h1 className="heading">Additional Resources</h1>
 
       		<h3><b>All information provided by this application respectfully sourced 
       		    from Heads Up CDC program.</b></h3>
