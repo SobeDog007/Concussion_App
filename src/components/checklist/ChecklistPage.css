@@ -1,3 +1,47 @@
-.submit:hover {
-    color:green;
+.checklistmain
+{
+	font-family: "Arial", sans-serif;
+
+	margin-left:    125px;
+	margin-right:   125px;
+	margin-bottom:  25px;
+	font-size:      130%;
+	padding-top:    10px;
+	padding-left:   20px;
+	padding-right:  20px;
+   padding-bottom: 20px;
+
+	background-color: #f3e986;
 }
+
+.checklistmain ul
+{
+ 	list-style: none;
+ 	display: inline;
+}
+
+/*.checklistmain li
+{
+  	display: inline;
+}*/
+
+.submit
+{
+	margin-left:    125px;
+	font-family: "Calibri", sans-serif;
+	text-align: center;
+	color: blue;
+	font-weight: bold;
+	background-color: white;
+}
+
+.submit:hover
+{
+	margin-left:    125px;
+	font-family: "Calibri", sans-serif;
+   text-align: center;
+   color: black;
+   font-weight: bold;
+   background-color: green;
+}
+

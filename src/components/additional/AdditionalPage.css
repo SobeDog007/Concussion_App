@@ -1,9 +1,12 @@
 .test {
+	font-family: "Arial", sans-serif;
 	border: 1px solid black;
 	background-color: #f3e986; /* light yellow */
 	position: center;			
 }
 
 .center  {
+	font-family: "Arial", sans-serif;
    text-align: center;
+   border: 1px solid black;
 }

@@ -3,89 +3,121 @@ import questions from './testQuestions';
 import './ChecklistPage.css';
 
 const ulStyle = {
-  listStyleType: 'none',
-  fontSize: '20px'
+  	listStyleType: 'none',
+  	fontSize: '20px'
 };
 
 export default class ChecklistPage extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      positiveRes: [],
-      questions: questions
-    }
-  }
+  	constructor() {
+    	super()
+    	this.state = {
+      	positiveRes: [],
+      	questions: questions
+    	}
+  	}
 
-  changeInput = (e) => {
+  	changeInput = (e) => {
 
-    console.log(e.target)
-    console.log(e.target.name)
-    let tempPositives = this.state.positiveRes
-    tempPositives.push(e.target.name)
-    this.setState({
-      positiveRes: tempPositives
-    })
-  }
+    	console.log(e.target)
+    	console.log(e.target.name)
+    	let tempPositives = this.state.positiveRes
+    	tempPositives.push(e.target.name)
+    	this.setState({
+      	positiveRes: tempPositives
+    	})
+  	}
 
-  submitData = () => {
-    let answers = JSON.stringify(this.state.positiveRes)
-    alert(`you have answered true on this question ${answers}`)
-    // API call to Results non-urgent or Results urgent depending on what checkboxes are selected.
-  }
+  	submitData = () => {
+    	let answers = JSON.stringify(this.state.positiveRes)
+    	alert(`you have answered true on this question ${answers}`)
+    	// API call to Results non-urgent or Results urgent depending on what checkboxes are selected.
+  	}
 
-  render() {
-    return (
-      <div>
-        <ul style={ulStyle} >
-          {this.state.questions.signs.map((question, index) => {
+  	render() {
+    	return (
 
-            return (
-              <li key={index}>
-               
-                <input
-                  onChange={this.changeInput}
-                  name={`signs-${index}`} type="checkbox" />
-                  <label htmlFor="checkBox1">{question}</label>
-              </li>
+    	<div className="parentDiv">
 
-            )
-          })}
+    		<div class="row">
 
-          {this.state.questions.symptoms.map((question, index) => {
+    			<div class="col-md-5">
 
-            return (
-              <li key={index}>
-               
-                <input
-                  onChange={this.changeInput}
-                  name={`symptoms-${index}`} type="checkbox" />
-                   <label htmlFor="checkBox1">{question}</label>
-              </li>
+      			<div className="checklistmain">
 
-            )
-          })}
+      		<h2><b>Signs & Symptoms</b></h2>
+      		
+        		<ul style={ulStyle} >
 
-          {this.state.questions.doNotMiss.map((question, index) => {
+          		{this.state.questions.signs.map((question, index) => {
 
-            return (
-              <li key={index}>
-                
-                <input
-                  onChange={this.changeInput}
-                  name={`doNotMiss-${index}`} type="checkbox" />
-                  <label htmlFor="checkBox1">{question}</label>
-              </li>
+	            	return (
+	              		<li key={index}>
+	               
+		               	<input
+		                  	onChange={this.changeInput}
+		                  	name={`signs-${index}`} type="checkbox" />
+		                  <label htmlFor="checkBox1">{question}</label>
+		              	</li>
+	            	)
+          		})}
 
-            )
-          })}
+          		{this.state.questions.symptoms.map((question, index) => {
 
-        </ul>
-        <input type="submit" value="Submit"
+		            return (
+		              	<li key={index}>
+		               
+		               	<input
+		                  	onChange={this.changeInput}
+		                  	name={`symptoms-${index}`} type="checkbox" />
+		                   <label htmlFor="checkBox1">{question}</label>
+		              	</li>
+		            )
+		         })}
 
-          onClick={() => this.submitData()}
+		      </ul>
 
-        />
-      </div>
-    );
-  }
+
+		      	</div>
+
+		      </div>
+
+		      <div class="col-md-5">
+
+		      	<div className="checklistmain">
+
+
+      		<h2><b>Do Not Miss Signs</b></h2>
+
+		      <ul style={ulStyle} >
+
+	          	{this.state.questions.doNotMiss.map((question, index) => {
+
+	            	return (
+	              		<li key={index}>
+	                
+	                		<input
+	                  		onChange={this.changeInput}
+	                  		name={`doNotMiss-${index}`} type="checkbox" />
+	                  	<label htmlFor="checkBox1">{question}</label>
+	              		</li>
+            		)
+          		})}
+
+        		</ul>
+
+        			</div>
+        		</div>
+
+        	</div>
+
+        	<div class="row">
+
+        		<input className="submit" type="submit" value="Calculate"
+          		onClick={() => this.submitData()}
+        		/>
+
+      	</div>
+      	</div>
+    	);
+  	}
 }

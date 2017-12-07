@@ -1,7 +1,7 @@
 let questions = {
     signs: [
-        'Appears dazed or stunned',
-        'Is confused about assignment or position',
+        '-- Appears dazed or stunned',
+        '-- Is confused about assignment or position',
         'Forgets an instruction',
         'Is unsure of game, score, or opponent',
         'Moves clumsily',
@@ -35,6 +35,4 @@ let questions = {
     ]
 }
     
-export default questions
-    
-    
+export default questions;
