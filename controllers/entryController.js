@@ -1,6 +1,6 @@
 const db = require("../models");
 
-// Defining methods for the entryController
+// Defining methods for the entryController.
 module.exports = {
   findAll: function(req, res) {
     db.Entry

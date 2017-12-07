@@ -1,1 +1,1 @@
-web: webpack-dev-server --inline
+web: npm run server
