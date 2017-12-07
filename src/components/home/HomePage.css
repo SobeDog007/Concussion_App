@@ -1,0 +1,42 @@
+.titlebox
+{
+	/*position:       center !important;*/
+	margin-left:    125px;
+	margin-right:   125px;
+	margin-bottom:  25px;
+	font-size:      130%;
+	padding-top:    10px;
+	padding-left:   20px;
+	padding-right:  20px;
+   padding-bottom: 20px;
+
+	background-color: #f3e986;
+}
+
+h1, h2
+{
+	font-weight: bold;
+}
+
+.factbox
+{
+	/*position:       center !important;*/
+	margin-left:    125px;
+	margin-right:   125px;
+	margin-bottom:  25px;
+	font-size:      130%;
+	padding-top:    10px;
+	padding-left:   20px;
+	padding-right:  20px;
+   padding-bottom: 20px;
+
+	background-color: #f3e986;
+}
+
+.heading
+{
+	border:      1px solid black;
+	text-align: center !important;
+	padding:     10px;
+	font-weight: bold;
+}
